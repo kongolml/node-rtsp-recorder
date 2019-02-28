@@ -60,7 +60,7 @@ const RTSPRecorder = class {
     if (this.categoryType === 'image') {
       return ['-vframes', '1']
     }
-    return ['-acodec', 'copy', '-vcodec', 'copy']
+    return ['-acodec', 'copy', '-vcodec', 'copy', '-t', '00:01:00']
   }
 
   getChildProcess(fileName) {
@@ -145,7 +145,7 @@ const RTSPRecorder = class {
       }
       self.recordStream()
     })
-    this.timer = setTimeout(self.killStream.bind(this), this.timeLimit * 1000)
+    // this.timer = setTimeout(self.killStream.bind(this), this.timeLimit * 1000)
 
     console.log('Start record ' + fileName)
   }

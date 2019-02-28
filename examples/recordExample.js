@@ -8,12 +8,12 @@
 const Recorder = require('../src/helpers/recorder')
 
 var rec = new Recorder({
-  url: 'rtsp://192.168.1.12:8554/unicast',
-  timeLimit: 60,
-  folder: '/Users/sahilchaddha/Sahil/Projects/Github/node-rtsp-recorder/videos',
-  name: 'cam1',
-  directoryPathFormat: 'MMM-Do-YY',
-  fileNameFormat: 'YYYY-M-D-h-mm-ss',
+  url: 'rtsp://admin:frt2012;;@115.78.15.6:9250/Streaming/Channels/101/',
+  folder: 'D://',
+  name: 'Video_Record',
+  type: 'CH01',
+  directoryPathFormat: 'YYYY_MM_DD',
+  fileNameFormat: 'hh_mm_ss',
 })
 rec.startRecording();
 
