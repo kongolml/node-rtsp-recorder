@@ -102,7 +102,7 @@ const RTSPRecorder = class {
     this.writeStream = this.getChildProcess(fileName)
     this.writeStream.once('exit', () => {
       if (cb) {
-        cb()
+        cb(fileName)
       }
     })
   }
